@@ -1,46 +1,30 @@
 package com.example.android_roomdao
 
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.android_roomdao.ui.theme.Android_RoomDAOTheme
+import androidx.lifecycle.Observer
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    private val userViewModel: UserViewModel by viewModels()
+    private lateinit var userAdapter: UserAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Android_RoomDAOTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+        setContentView(R.layout.activity_main)
+
+        // Initialiser le RecyclerView
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        userAdapter = UserAdapter()
+        recyclerView.adapter = userAdapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        // Observer les données LiveData
+        userViewModel.allUsers.observe(this, Observer { users ->
+            users?.let {
+                userAdapter.setUsers(it)
             }
-        }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Android_RoomDAOTheme {
-        Greeting("Android")
+        })
     }
 }
