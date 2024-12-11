@@ -69,6 +69,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation ("androidx.recyclerview:recyclerview:1.3.0")
     // Room Database
     implementation("androidx.room:room-runtime:2.5.0")
     kapt("androidx.room:room-compiler:2.5.0") // KAPT pour Room
@@ -78,3 +79,4 @@ dependencies {
 
     // Preference Library
     implementation("androidx.preference:preference-ktx:1.2.0")
+}

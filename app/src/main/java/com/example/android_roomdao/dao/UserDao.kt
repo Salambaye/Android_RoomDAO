@@ -5,7 +5,10 @@ package com.example.android_roomdao.dao
     import androidx.room.Insert
     import androidx.room.Query
     import androidx.room.Delete
-    @Dao
+    import androidx.room.Update
+    import com.example.android_roomdao.models.User
+
+@Dao
     interface UserDao {
         @Insert
         suspend fun insert(user: User)
