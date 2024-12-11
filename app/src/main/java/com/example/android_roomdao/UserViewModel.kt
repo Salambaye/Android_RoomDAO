@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import com.example.android_roomdao.models.User
+import com.example.android_roomdao.repository.UserRepository
 
 class UserViewModel(private val userRepository: UserRepository) : ViewModel() {
 
