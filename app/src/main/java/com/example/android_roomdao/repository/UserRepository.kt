@@ -1,6 +1,8 @@
 package com.example.android_roomdao.repository
 
 import androidx.lifecycle.LiveData
+import com.example.android_roomdao.dao.UserDao
+import com.example.android_roomdao.models.User
 
 // Le Repository sert d'abstraction pour accéder aux données
 // Il est responsable de l'interaction avec le DAO (Data Access Object)
