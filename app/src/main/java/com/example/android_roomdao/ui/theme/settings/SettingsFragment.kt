@@ -3,6 +3,7 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import android.os.Bundle
 import android.content.SharedPreferences
+import com.example.android_roomdao.R
 
 class SettingsFragment : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
