@@ -9,27 +9,29 @@ L’application utilise les composants Lifecycle d’Android et prend en charge 
 
 - Intégration de Room Database : Stockage local efficace des données.
 
-    -Opérations DAO :
+- Opérations DAO :
 
-Insertion, mise à jour, suppression des utilisateurs.
+            * Insertion, mise à jour, suppression des utilisateurs.
 
-Requête pour récupérer tous les utilisateurs avec prise en charge de LiveData.
+            * Requête pour récupérer tous les utilisateurs avec prise en charge de LiveData.
 
-Lifecycle Android : Intégration avec LiveData pour l’observation des données.
+- Lifecycle Android : Intégration avec LiveData pour l’observation des données.
 
-Structure du projet
+  
 
-Composants principaux
+## Structure du projet
 
-Entités :
+### Composants principaux
 
-User : Représente la table utilisateur dans la base de données.
+1. Entités :
 
-DAO :
+    - User : Représente la table utilisateur dans la base de données.
 
-UserDao : Contient les méthodes d’accès à la base de données (insertion, mise à jour, suppression, requête).
+2. DAO :
 
-Base de données :
+    - UserDao : Contient les méthodes d’accès à la base de données (insertion, mise à jour, suppression, requête).
+
+3. Base de données :
 
 UserDatabase : Classe abstraite représentant la base de données Room.
 
