@@ -1,8 +1,8 @@
 package com.example.android_roomdao.utils  // Remplacez par le package approprié
 
 import android.content.Context
-import com.example.android_roomdao.R
 import com.example.android_roomdao.models.User  // Assurez-vous d'importer la classe User
+import com.example.android_roomdao.R
 import org.json.JSONObject
 
 fun parseJson(context: Context): List<User> {
