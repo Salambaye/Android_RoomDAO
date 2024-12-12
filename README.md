@@ -103,24 +103,24 @@ data class User(
 
 ### Insérer un utilisateur
 
-val user = User(name = "John Doe", email = "johndoe@example.com")
-userDao.insert(user)
+  val user = User(name = "John Doe", email = "johndoe@example.com")
+  userDao.insert(user)
 
 ### Requêter les utilisateurs
 
-val users: LiveData<List<User>> = userDao.getAllUsers()
-users.observe(this) { userList ->
-    // Mettre à jour l’interface utilisateur
-}
+  val users: LiveData<List<User>> = userDao.getAllUsers()
+  users.observe(this) { userList ->
+        // Mettre à jour l’interface utilisateur
+  }
 
 ### Mettre à jour un utilisateur
 
-val updatedUser = user.copy(name = "Jane Doe")
-userDao.updateUser(updatedUser)
+  val updatedUser = user.copy(name = "Jane Doe")
+  userDao.updateUser(updatedUser)
 
 ### Supprimer un utilisateur
 
-userDao.deleteUser(user)
+  userDao.deleteUser(user)
 
 ## Dépannage
 
