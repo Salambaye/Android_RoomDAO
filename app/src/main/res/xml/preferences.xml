@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<SwitchPreferenceCompat
+    android:key="theme_preference"
+    android:title="Mode sombre"
+    android:summary="Activer/désactiver le mode sombre" />
+
+<SwitchPreferenceCompat
+    android:key="notifications_preference"
+    android:title="Notifications"
+    android:summary="Activer/désactiver les notifications" />
+</PreferenceScreen>
